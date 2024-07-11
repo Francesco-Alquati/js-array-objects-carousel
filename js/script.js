@@ -23,17 +23,30 @@ const images = [
 ];
 
 // RECUPERO IL CONTAINER DAL DOM
-let container = document.getElementById('main-container');
+const carousel = document.getElementById('main-container');
 
-images.forEach((elem, index) =>{
-    container.innerHTML += 
-    `<div class="card text-bg-dark">
-        <img src="" class="card-img" alt="">
+// INIETTO IN HTML UNA STRUTTURA INSERENDO GLI OGGETTI DELL'ARRAY NEL DOM CON IL METODO FOREACH()
+images.forEach((elem) =>{
+    carousel.innerHTML += 
+    `<div class="card text-bg-dark d-none">
+        <img src="${elem.image}" alt="${elem.title}">
         <div class="card-img-overlay">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
-            <p class="card-text"><small></small></p>
+            <h5 class="card-title text-danger fs-1">${elem.title}</h5>
         </div>
-    </div>`
-
+        <div class="card-img-overlay">
+        <p class="position-absolute bottom-0 fs-5">${elem.text}</p>
+        </div>
+      
+    </div>`;
 });
+
+
+// DICHIARO IL PRIMO ELEMENTO VISIBILE
+let currentImageIndex = 0; 
+
+// RECUPERO GLI ELEMENTI CON LA CLASSE CARD
+const imageCards = document.querySelectorAll('.card'); 
+
+// RIMUOVO D-NONE DAL PRIMO ELEMENTO DELL'ARRAY
+imageCards[currentImageIndex].classList.remove('d-none');
+
