@@ -45,3 +45,11 @@ Aggiungere funzionalità di autoplay: dopo un certo periodo di tempo (3 secondi)
 *BONUS 3:*
 Aggiungere bottoni di start/stop e di inversione del meccanismo di autoplay.
 Buon lavoro!
+
+DIVIDO IL PROBLEMA IN SOTTOPROBLEMI 
+
+1 - Scrivo l'array di oggetti in js
+2 - Creo un container un <img> e un button in index.html dove mettere e scorrere le immagini
+3 - Rimuvo da index.html la struttura e la riscrivo in js tramite un metodo forEach() e un .innerHTML
+4 - Richiamo il pulsante dal DOM
+5 - Creo una function per scorrere le imagini tramite il pulsante 
