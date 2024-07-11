@@ -50,3 +50,25 @@ const imageCards = document.querySelectorAll('.card');
 // RIMUOVO D-NONE DAL PRIMO ELEMENTO DELL'ARRAY
 imageCards[currentImageIndex].classList.remove('d-none');
 
+// RECUPERO IL PULSANTE DAL DOM
+const btn = document.getElementById('button');
+
+btn.addEventListener('click',function(){
+    // AGGIUNGO LA CLASSE D-NONE
+    imageCards[currentImageIndex].classList.add('d-none');
+
+    // CONDIZIONE PER SCORRERE LE IMMAGINI FINO ALL'ULTIMO ELEMENTO DELL'ARRAY
+    if(currentImageIndex == images.length - 1){
+        
+        currentImageIndex = 0;
+
+    }
+    else{
+        // INCREMENTO
+            currentImageIndex++;
+    }
+
+    // RIMUOVO D-NONE DALL'ELEMENTO DELL'ARRAY
+    imageCards[currentImageIndex].classList.remove('d-none');
+
+});
