@@ -26,6 +26,14 @@ const images = [
 let container = document.getElementById('main-container');
 
 images.forEach((elem, index) =>{
-    container.innerHTML += ``
+    container.innerHTML += 
+    `<div class="card text-bg-dark">
+        <img src="" class="card-img" alt="">
+        <div class="card-img-overlay">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <p class="card-text"><small></small></p>
+        </div>
+    </div>`
 
 });
