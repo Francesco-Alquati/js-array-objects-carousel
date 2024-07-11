@@ -75,3 +75,10 @@ next.addEventListener('click',function(){
 // RECUPERO IL PULSANTE DAL DOM
 const prev = document.getElementById('prev');
 
+prev.addEventListener('click',function(){
+    // AGGIUNGO LA CLASSE D-NONE
+    imageCards[currentImageIndex].classList.add('d-none');
+
+
+
+});
