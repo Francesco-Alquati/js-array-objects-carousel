@@ -79,6 +79,12 @@ prev.addEventListener('click',function(){
     // AGGIUNGO LA CLASSE D-NONE
     imageCards[currentImageIndex].classList.add('d-none');
 
+    // SOTTREGGO 1 PER ANDARE ALL'IMAGINE PRECEDENTE 
+    // AGGIUNGO LA LUNGHEZZA DELL'ARRAY PER ASSICURARMI CHE IL RISULTATO NON SIA NEGATIVO
+    // DIVIDO PER LA LUNGHEZZA DELL'ARRAY COSI DA VERE UN RESIDUO CHE RAPPRESENTA UN INDICE VALIDO DELL'ARRAY
+    currentImageIndex = (currentImageIndex - 1 + imageCards.length) % imageCards.length;
 
+    // RIMUOVO D-NONE DALL'ELEMENTO DELL'ARRAY
+    imageCards[currentImageIndex].classList.remove('d-none');
 
 });
