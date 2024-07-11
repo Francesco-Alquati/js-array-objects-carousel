@@ -51,9 +51,9 @@ const imageCards = document.querySelectorAll('.card');
 imageCards[currentImageIndex].classList.remove('d-none');
 
 // RECUPERO IL PULSANTE DAL DOM
-const btn = document.getElementById('button');
+const next = document.getElementById('next');
 
-btn.addEventListener('click',function(){
+next.addEventListener('click',function(){
     // AGGIUNGO LA CLASSE D-NONE
     imageCards[currentImageIndex].classList.add('d-none');
 
@@ -61,7 +61,6 @@ btn.addEventListener('click',function(){
     if(currentImageIndex == images.length - 1){
         
         currentImageIndex = 0;
-
     }
     else{
         // INCREMENTO
@@ -72,3 +71,7 @@ btn.addEventListener('click',function(){
     imageCards[currentImageIndex].classList.remove('d-none');
 
 });
+
+// RECUPERO IL PULSANTE DAL DOM
+const prev = document.getElementById('prev');
+
