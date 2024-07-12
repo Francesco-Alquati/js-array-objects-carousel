@@ -22,3 +22,7 @@ img{
 .m-auto{
     margin: auto;
 }
+.bg-trasp{
+    background-color: rgba(0, 0, 0, 0.506);
+    
+}

@@ -34,7 +34,7 @@ images.forEach((elem) =>{
             <h5 class="card-title text-danger fs-1">${elem.title}</h5>
         </div>
         <div class="card-img-overlay">
-        <p class="position-absolute bottom-0 fs-5">${elem.text}</p>
+        <p class="position-absolute bottom-0 start-0 bg-trasp fs-5">${elem.text}</p>
         </div>
       
     </div>`;
